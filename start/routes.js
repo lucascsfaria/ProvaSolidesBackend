@@ -8,3 +8,7 @@ Route.post('sessions', 'SessionController.store')
 
 Route.post('passwords', 'ForgotPasswordController.store')
 Route.put('passwords', 'ForgotPasswordController.update')
+
+Route.resource('points', 'PointController')
+  .only(['index', 'store'])
+  .middleware('auth')

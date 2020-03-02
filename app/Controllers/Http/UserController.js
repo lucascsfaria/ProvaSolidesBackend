@@ -10,6 +10,12 @@ class UserController {
 
         return user
     }
+
+    async index ({ auth }) {
+        const user = await User.all()
+    
+        return user
+      }
 }
 
 module.exports = UserController
